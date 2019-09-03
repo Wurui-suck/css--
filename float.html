@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>float</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        *::after,
+        *::before {
+            box-sizing: border-box;
+        }
+
+        .clearfix::after {
+            content: '';
+            clear: both;
+            display: block;
+        }
+
+        header {
+            border: 1px red solid;
+        }
+
+        .logo {
+            float: left;
+            height: 30px;
+            width: 80px;
+            border: 1px red solid;
+            margin-top: 5px;
+            margin-left: 20px
+        }
+
+        nav {
+
+            float: left;
+            height: 40px;
+            width: 200px;
+            margin-left: 100px;
+        }
+
+        ol {
+            float: left;
+            height: 25px;
+            border: 1px solid red;
+            margin-top: 7px;
+            margin-left: 0.5em
+        }
+
+        aside {
+            border: 1px green solid;
+            height: 600px;
+            width: 200px
+        }
+
+        .aside-left {
+            float: left;
+        }
+
+        .aside-right {
+            float: right;
+        }
+
+        .body {
+            border: 1px black solid;
+            height: 600px;
+            margin-top: 30px
+        }
+
+        main {
+
+            margin-left: auto;
+            margin-right: auto;
+            height: 600px;
+            width: 1000px;
+        }
+
+        footer {
+            height: 50px;
+            border: 1px green solid;
+            margin-top: 30px;
+        }
+
+        .x {
+            width: 1008px;
+            margin-right: -8px;
+
+        }
+
+        .child {
+            float: left;
+            margin-right: 8px;
+            width: 244px;
+            height: 295px;
+            margin-bottom: 10px;
+
+            background: black
+        }
+    </style>
+</head>
+
+<body>
+    <header class="clearfix">
+        <div class="logo">logo</div>
+        <nav class="clearfix">
+            <ol>首页</ol>
+            <ol>课程</ol>
+            <ol>优惠</ol>
+            <ol>商城</ol>
+        </nav>
+    </header>
+    <div class="clearfix body">
+        <aside class="aside-left">这是aside</aside>
+        <aside class="aside-right">这是aside</aside>
+        <main>
+            <div class="clearfix x">
+                <div class="child"></div>
+                <div class="child"></div>
+                <div class="child"></div>
+                <div class="child"></div>
+                <div class="child"></div>
+                <div class="child"></div>
+                <div class="child"></div>
+                <div class="child"></div>
+
+            </div>
+        </main>
+        <footer>这是footer</footer>
+    </div>
+</body>
+
+</html>
